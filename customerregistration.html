@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    nav li{font-family:sans-serif;font-display:20px;}
+    label {
+      font-size:20px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 'Arial Narrow Bold', sans-serif;
+      font-weight: 200; 
+      color: #4e342e;text-shadow: 1px 1px 2px #4e342e,;
+    }
+    i{color: #bbdefb;text-shadow: 1px 1px 2px;}
+    h4{font-family: sans-serif;color: #84ffff ;text-shadow: 1x 1px 1px  #4e342e;}
+    input {
+      font-size: 10px;
+      font-family: 'Lucida Sans', sans-serif;
+      font-weight:50;
+      color: white;
+      background-color: white;
+    }
+    .circle{margin-top:150px;}
+   
+    body {
+      background-size:contain;
+      background-image: url(water5.jpg);
+      
+    }
+    
+
+  </style>
+  <script type="text/javascript">
+  var userName;
+  var phoneNo;
+  var eMail;
+  var passWord;
+  var address;
+  var landmark;
+  var city;
+  var state;
+  var sButton;
+  var rButton;
+  var filed;
+
+  var init=function () {
+    userName=document.getElementById('firstName');
+    phoneNo=document.getElementById('phoneNumber');
+    eMail=document.getElementById('email');
+    passWord=document.getElementById('password');
+    address=document.getElementById('Address');
+    landmark=document.getElementById('Landmark');
+    city=document.getElementById('City');
+    state=document.getElementById('State');
+    sButton=document.getElementById('subButton');
+     rButton=document.getElementById('resetButton');
+    
+     subButton.onclick= printValues;
+     resetButton.onclick=rest;
+  }
+  window.onload= init;
+  function printValues() {
+    var customerfirstName = userName.value;
+    var customerphNo = phoneNo.value;
+    var customereMailid = eMail.value;
+    var customerpassword = passWord.value;
+    var customeraddress= address.value;
+    var customerlandmark= landmark.value;
+    var customercity= city.value;
+    var customerstate= state.value;
+    var error = false;
+    
+    if (customerfirstName == null || customerfirstName.length == 0) {
+      error = true;
+
+    }
+    if (customerphNo == null || customerphNo.length == 0) {
+      error = true;
+
+    }
+
+    if (customereMailid == null || customereMailid.length == 0) {
+      error = true;
+
+    }
+
+    if (customerpassword == null || customerpassword.length == 0) {
+      error = true;
+
+    }
+    if (customeraddress == null || customeraddress.length == 0) {
+      error = true;
+
+    }
+    if (customerlandmark == null || customerlandmark.length == 0) {
+      error = true;
+
+    }
+
+    if (customercity == null || customercity.length == 0) {
+      error = true;
+
+    }
+
+    if (customerstate == null || customerstate.length == 0) {
+      error = true;
+
+    }
+
+    if (error) {
+
+      alert('All fields are required');
+
+
+      return;
+    }
+    if (true){
+      alert("cutomer registertionis successful you will go to log in");
+    }
+  
+
+
+
+  }
+  function rest() {
+
+    userName.value = '';
+    phoneNo.value = '';
+    eMail.value = '';
+    passWord.value = '';
+    address.value='';
+    landmark.value='';
+    city.value='';
+    state.value='';
+
+  }
+  
+
+  </script>
+</head>
+
+<body class="#90caf9 blue lighten-3">
+  <nav class="#00e5ff cyan accent-3" role="navigation"
+    style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;">
+
+    <div class="nav-wrapper container">
+      <a id="logo-container" class="brand-logo"><img class="chip" src="log.jpg"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home.html"><b>Home</b></a></li>
+        <li><a href="customerlogin.html"><b>Login</b></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+
+  </nav>
+
+
+  <!--contstart-->
+  <div class="container">
+   <div class="row ">
+         <!--<div class=" col-sm-6">
+             <img class="circle" src="water1.jpg">
+          </div>--> 
+          <div id="filed"></div>
+     <form class=" col s6">
+        <div class="card #f9fbe7 lime lighten-5">
+          <div class="card-content"style="background-color:#81d4fa;">
+            <h4 class="center"><b>Customer Registration</b></h4>
+            <div class="form-field ">
+              <i class=" Tiny material-icons ">account_circle</i>
+              <label for="firstName">First Name</label>
+              <input palceholder="Enter Your First Name" id="firstName" type="text" class="validate">
+            </div>
+            <div class="form-field">
+              <i class=" Tiny material-icons ">phone</i>
+              <label for="phoneNumber">PhoneNumber</label>
+              <input id="phoneNumber" type="text" class="validate">
+            </div>
+            <div class="form-field ">
+              <i class=" Tiny material-icons ">email</i>
+              <label for="email">Email</label>
+              <input palceholder="ex:Google@gmail.com" id="email" type="email" class="validate">
+              <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+
+            </div>
+            <div class="form-field ">
+              <i class="Tiny material-icons ">lock</i>
+              <label for="password">Password</label>
+              <input id="password" type="password" class="validate">
+            </div>
+            <div class=" form-field ">
+              <i class=" Tiny material-icons ">add_location</i>
+              <label for="Address">Address</label>
+              <input id="Address" type="text" class="validate">
+            </div>
+            <div class=" form-field">
+                <i class=" Tiny material-icons ">add_location</i>
+                <label for="Landmark">Landmark</label>
+                <input id="Landmark" type="text" class="validate">
+              </div>
+              <div class=" form-field">
+                  <i class=" Tiny material-icons ">add_location</i>
+                  <label for="City">City</label>
+                  <input id="City" type="text" class="validate">
+                </div>
+                <div class=" form-field ">
+                    <i class=" Tiny material-icons ">add_location</i>
+                    <label for="State">State</label>
+                    <input id="State" type="text" >
+
+                  </div>
+
+              <div class="form-field">
+              <input type="button" class="btn btn-primary" id="subButton"value="Submit"/>
+
+              <input type="button" class="waves-effect waves-light btn " id="resetButton"value="Clear"/></div>
+          </div>
+          
+        </div>
+        
+      </form>
+      
+    </div>
+  </div>
+  <!--cont end-->
+  </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
